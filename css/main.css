@@ -9,7 +9,7 @@
     --gutter: 30px;
     --side-small: 26;
     --side-big:36;
-    --depth: 5000px;
+    --depth: 4700px;
     --transition: .75s cubic-bezier(.075, .5, 0, 1); 
 }
 
@@ -121,4 +121,22 @@ video.frame-media--left {
 .frame p {
     max-width: 30vw;
     margin-top: 3vh;
+}
+
+@media (max-width: 767px) {
+    video.frame-media--right {
+        left: calc(var(--side-big) / 2 * var(--index) + 10px);
+    }
+    
+    video.frame-media--left {
+        right: calc(var(--side-big) / 2 * var(--index) + 10px);
+    }
+
+    .frame-media--left {
+        right: calc(var(--side-small) / 2 * var(--index) + 10px);
+    }
+    
+    .frame-media--right {
+        left: calc(var(--side-small) / 2 * var(--index) + 10px);
+    }
 }
